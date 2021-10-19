@@ -5,11 +5,9 @@ import './app.css'
 
 function App() {
   return (
-
-    <body id="background">
-      <Header></Header>
-      <Header></Header>
-    </body>
+    <>
+    <Header></Header>
+    </>
   );
 }
 
