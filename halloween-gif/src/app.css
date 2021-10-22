@@ -3,3 +3,8 @@
   width: cover;
   height: 100rem;
 }
+
+#title {
+  text-align: center;
+  font-size: 200%;
+}
