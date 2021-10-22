@@ -1,20 +1,27 @@
 import '../app.css';
-import { useAppSelector, useAppDispatch } from '../hook'
+import { useAppSelector, useAppDispatch } from '../hook';
 
-import { decrement, increment } from '../changeGif'
+import { reset, increment } from '../changeGif';
 
 function Gif() {
-  const index = useAppSelector((state) => state.indexer);
+  const gifs = useAppSelector((state) => state.indexer.gifs);
+  const index = useAppSelector((state) => state.indexer.index);
   console.log(index);
 
   const dispatch = useAppDispatch();
+  console.log(gifs);
   
   const titleName:string = "HallowSurprise!";
     return (
-        <div id='title'>{titleName}
-        <button onClick={() => dispatch(increment())}>increment</button>
-       <button onClick={() => dispatch(decrement())}>decrement</button>
+      <>
+        <div id="center">
+        <div><button onClick={() => dispatch(increment())}>next</button> </div>
+        <div><button onClick={() => dispatch(reset())}>reset</button> </div>
+        <div>
+        <img src={gifs[index]} alt="loading..."/>
         </div>
+        </div>
+      </>
     );
   }
   
