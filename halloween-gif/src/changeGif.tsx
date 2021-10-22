@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import type { RootState } from './store'
 
 export const indexSlice = createSlice({
   name: "changeGif",
@@ -16,5 +17,7 @@ export const indexSlice = createSlice({
 });
 
 export const { increment, reset } = indexSlice.actions;
+
+export const selectIndex = (state: RootState) => state.indexer.index
 
 export default indexSlice.reducer;

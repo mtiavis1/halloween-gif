@@ -7,7 +7,8 @@ import { useSelector } from "react-redux";
 
 
 function App() {
-  //const { index } = useSelector((state) => state.indexer)
+  const { index } = useSelector((state) => state.indexer)
+  console.log(index);
   //const { index } = useSelector()
   return (
     <>
